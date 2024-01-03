@@ -8,7 +8,9 @@ async function encodeMessage(e) {
   let encodedMessage = "";
   let shift = parseInt(prompt("Enter the shift value: "));
   let inputMessage = message.value;
-  
+  if (shift ===""||shift===null) {
+    return
+  }
   if (shift > 25 || shift < 0) {
     alert("Shift value must be between 0 and 25");
     return;
@@ -42,6 +44,16 @@ function decodeMessage(e) {
   e.preventDefault();
   let decodedMessage = "";
   let shift = parseInt(prompt("Enter the shift value: "));
+  if (shift ===""||shift===null) {
+    return
+  }
+  if (shift > 25 || shift < 0) {
+    alert("Shift value must be between 0 and 25");
+    return;
+  } else if (isNaN(shift) === true) {
+    alert("Shift value must be a number");
+    return;
+  }
   let encodedMessage = decmessage.value;
 
   for (let i = 0; i < encodedMessage.length; i++) {
