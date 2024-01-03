@@ -1,6 +1,6 @@
 let message = document.querySelector("#enc-val");
 let decmessage = document.querySelector("#dec-val");
-
+let div = document.querySelector("div h1");
 document.querySelector("button").addEventListener("click", encodeMessage);
 
 async function encodeMessage(e) {
@@ -21,7 +21,9 @@ async function encodeMessage(e) {
       encodedMessage += char;
     }
   }
+  
   console.log("Encoded Message:", encodedMessage);
+  div.innerHTML = "Encoded Message: " + encodedMessage;
 }
 
 function decodeMessage(e) {
@@ -42,5 +44,6 @@ function decodeMessage(e) {
       decodedMessage += char;
     }
   }
-  console.log("Decoded Message:", decodedMessage);
+  div.innerHTML = "Decoded Message: " + decodedMessage;
+
 }
