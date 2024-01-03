@@ -8,7 +8,13 @@ async function encodeMessage(e) {
   let encodedMessage = "";
   let shift = parseInt(prompt("Enter the shift value: "));
   let inputMessage = message.value;
-
+if (shift > 25 || shift<0  ) {
+  alert("Shift value must be between 0 and 25");
+  return;
+}else if(isNaN(shift) ===true){
+  alert("Shift value must be a number");
+return
+}
   for (let i = 0; i < inputMessage.length; i++) {
     let char = inputMessage[i];
     if (char.match(/[a-zA-Z]/)) {

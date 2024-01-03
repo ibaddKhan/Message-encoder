@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form onsubmit="encodeMessage(event)">
-      <input type="text" name="" id="enc-val" />
-      <button type="submit">Encrypt</button>
-    </form>
-    <form onsubmit="decodeMessage(event)">
-      <input type="text" name="" id="dec-val" />
-      <button type="submit">Decrypt</button>
-    </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Encoder/Decoder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="main-head">Securify</h1>
+ <div class="container">
+  <form onsubmit="encodeMessage(event)">
+    <input type="text" name="" id="enc-val" placeholder="Enter text to encrypt" />
+    <button type="submit">Encrypt</button>
+</form>
 
-    <div style="display: flex; justify-content: center; margin-top: 30px; font-size: xx-large;"><h1></h1></div>
+<form onsubmit="decodeMessage(event)">
+    <input type="text" name="" id="dec-val" placeholder="Enter text to decrypt" />
+    <button type="submit">Decrypt</button>
+</form>
+
+ </div>
+    <div class="res-div">
+        <h1></h1>
+    </div>
+    
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
